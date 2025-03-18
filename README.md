@@ -32,14 +32,26 @@ Prompt Engineering is the process of designing effective instructions (prompts) 
     - Asking the AI to explain its reasoning improves accuracy.
     - Example: Prompt: "Solve the math problem 24 × 17 using a step-by-step approach."
 
-### Advanced Prompt Engineering Techniques
-  - ✅ Zero-shot Prompting - No examples provided; AI generates a response based on prior knowledge.
+### Prompt Engineering Techniques
+  - ✅ Zero-shot Prompting - No examples provided; No demonstration from human. Direct Instructions are given. AI generates a response based on prior knowledge.
     - Example: "Summarize this research paper in three sentences."
   - ✅ Few-shot Prompting - A few examples are given before the AI generates an output.
     - Example: "Translate the following:
                 1. 'Good morning' → 'Buenos días'
                 2. 'See you later' → 'Hasta luego'
                 3. 'How are you?' →"
+  - ✅ Chain-of-Thought (CoT) Prompting - enables complex reasoning capabilities through intermediate reasoning steps. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding.
+  - ✅ Zero-shot Chain-of-Thought (CoT) Prompting
+  - ✅ Automatic Chain-of-Thought (CoT) Prompting - Auto-CoT consists of two main stages:
+            Stage 1): question clustering: partition questions of a given dataset into a few clusters
+            Stage 2): demonstration sampling: select a representative question from each cluster and generate its reasoning chain using Zero-Shot-CoT with simple heuristics
+            The simple heuristics could be length of questions (e.g., 60 tokens) and number of steps in rationale (e.g., 5 reasoning steps). This encourages the model to use simple and accurate demonstrations.
+  - ✅ Meta Prompting - focuses on the structural and syntactical aspects of tasks and problems rather than their specific content details.
+            Structure-oriented: Prioritizes the format and pattern of problems and solutions over specific content.
+            Syntax-focused: Uses syntax as a guiding template for the expected response or solution.
+            Abstract examples: Employs abstracted examples as frameworks, illustrating the structure of problems and solutions without focusing on specific details.
+            Versatile: Applicable across various domains, capable of providing structured responses to a wide range of problems.
+            Categorical approach: Draws from type theory to emphasize the categorization and logical arrangement of components in a prompt.
   - ✅ Role-based Prompting - Assigning a role to AI for more tailored responses.
     - Example: "You are a cybersecurity expert. Explain the importance of encryption in online transactions."
   - ✅ Multi-turn Prompting - Using follow-up prompts to refine AI responses.
@@ -57,3 +69,18 @@ Prompt Engineering is the process of designing effective instructions (prompts) 
   - Specify Format
   - Limit Scope
   - Avoid leading the answer
+### LLM Settings
+  - Temperature
+  - Top P
+  - Max Length
+  - Stop Sequences
+  - Frequency Penalty
+  - Presence Penalty
+### Prompt Examples
+  - Text Summarization
+  - Information Extraction
+  - Question Answering
+  - Text Classification
+  - Conversation
+  - Code Generation
+  - Reasoning
